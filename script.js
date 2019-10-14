@@ -29,3 +29,21 @@ function goToGoogle(event){
 }
 
 /* Task 4 using jQuery */
+//4a
+$('#addText').click(function(event){
+    let pera = $('<p>').text("Hello World")
+    $('#task4a').append(pera);
+})
+//4b
+$('.colorBtn').click(function(event){
+    $('body').css('background-color',event.target.innerHTML.toLowerCase())
+})
+//4c
+$('#addBtn').click(function(event){
+    let first= $('#fnumber').val()
+    let second = $('#lnumber').val()
+    let sum = Number(first)+Number(second)
+    $('#answer').text(sum)
+    $('#fnumber').val("")
+    $('#lnumber').val("")
+})
